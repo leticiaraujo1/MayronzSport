@@ -23,11 +23,18 @@ function onLoad(){
 
 
 function enter(){
-  tentativas()
-  if(login.value == "admin" && password.value == "@dmiN" && triesNumber > 0){
-    window.location.href = "../main-page/index.html"
-  }
-  
+  fetch("logins.txt")
+  .then((res) => res.text())
+  .then((text) => {
+    let arrLogins = text.split(', ')
+    let indexLog = arrLogins.indexOf(login.value)
+
+    if (arrLogins.includes(login.value) && indexLog%2==0 && arrLogins[indexLog + 1]==password.value){
+      window.location.href = "../main-page/index.html"
+    } else {
+      tentativas()
+    }
+  }) 
 }
 
 function tentativas(){
