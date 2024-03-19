@@ -21,8 +21,13 @@ let accTotal = 0
 let shoesTotal = 0
 let shortsTotal = 0
 let totalItens = 0
+
 const submitBtn = document.getElementById('submitBtn');
+const stockBtn =  document.getElementById('stockBtn')
 const successMessage = document.getElementById('successMessage');
+
+const editContainer = document.querySelector('.edit-container');
+const mainContainer = document.querySelector('.main-container');
 
 let index = 0
 
@@ -31,6 +36,11 @@ submitBtn.addEventListener('click', addItens)
 categorySelect.addEventListener('change', () => {
   index = categorySelect.selectedIndex
 })
+
+stockBtn.addEventListener('click', () => {
+  editContainer.style.display = 'block';
+  mainContainer.style.display = 'none';
+});
 
 //Função para adicionar os itens assim que o botão é pressionado
 //A função chama as outras dentro dela mesma

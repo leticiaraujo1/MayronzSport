@@ -19,7 +19,24 @@
     <img src="images/Logo.svg">
   </header>
 
-  <div class="container">
+  <div class="container edit-container">
+    <h1 id="editar">Editar Estoque</h1>
+    <div class="stock-container">
+      <select class="select-input">
+        <option value="" disabled selected hidden>Selecione o item a editar ou excluir</option>
+      </select>
+      <input type="text" class="edit-name" placeholder="Edite o nome do produto">
+      <input type="text" class="edit-quantity" placeholder="Edite a quantidade do produto">
+      <button class="edit-button">Editar</button>
+      <button class="delete-button">Excluir</button>
+      <button id="exportBtn">Exportar Relatório</button>
+    </div>
+    
+    <button class="back-button" id="backBtn">Voltar</button>
+  </div>
+
+
+  <div class="container main-container">
 
     <div class="register-container">
       <hr class="hr-register">
@@ -46,7 +63,7 @@
         <input type="text" name="quantity-input" class="quantity-input">
       </div>
 
-      <button class="submit-button" id="submitBtn">Adicionar</button>
+      <button class="button submit-button" id="submitBtn">Adicionar</button>
       <div class="success-message" id="successMessage">Item adicionado com sucesso!</div>
 
     </div>
@@ -71,9 +88,10 @@
 
       <p class="label-total">Quantitativo total:</p>
       <p class="quantity-products"><span class="total-products">0</span> Produtos</p>
-
     </div>
 
+    <button class="button stock-button" id="stockBtn">Estoque</button>
+</div>
     <script src="script.js"></script>
 </body>
 

@@ -34,10 +34,31 @@ html {
     margin-left: 124px;
     margin-top: 76px;
     border-radius: 23px;
-    background: linear-gradient(180deg, rgba(0, 87, 136, 0.50) 25.94%, rgba(145, 175, 47, 0.50) 80.73%, rgba(191, 219, 197, 0.00) 100%);
+    background: linear-gradient(180deg, rgba(0, 87, 136, 0.50) 25.94%, rgba(145, 175, 47, 0.50) 80.73%);
     box-shadow: 2px 6px 19px 5px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(50px);
     padding: 3% 3%;
+  }
+
+  .main-container {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    padding: 40px;
+  }
+
+  .button {
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background-color: #A7DC58;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 800;
+    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.09);
+    transition-duration: 0.4s;
   }
   
   .register-container {
@@ -156,18 +177,8 @@ html {
   
   
   .submit-button {
-    width: 150px;
-    height: 50px;
-    border: none;
-    border-radius: 30px;
-    outline: none;
     background-color: #A7DC58;
-    color: #FFF;
-    font-size: 18px;
-    font-weight: 800;
-    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.09);
     margin-left: 80px;
-    transition-duration: 0.4s;
   }
   
   .submit-button:hover {
@@ -231,6 +242,25 @@ html {
     animation: fadeInUp 0.3s ease-in-out, fadeOut 0.3s ease-in-out 2.7s forwards;
   }
   
+  .stock-button {
+    background-color: hsl(38, 76%, 53%);
+    margin-left: 630px;
+    margin-top: 10px;
+  }
+
+  .stock-button:hover {
+    background-color: hwb(30 5% 41%);
+    cursor: pointer;
+  }
+
+  .edit-container {
+    position: absolute;
+    top: 33;
+    left: 25;
+    z-index: 2;
+    display: none;
+  }
+
   @keyframes fadeInUp {
     0% {
       opacity: 0;
