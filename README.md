@@ -13,3 +13,6 @@ Senha (Password): @dmiN
 ## Main Page:
 <img src="/images/main-img.png">
 
+## Remarks
+The website is still not responsive and there are some new functionalities that I'm going to add.
+
